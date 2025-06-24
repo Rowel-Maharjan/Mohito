@@ -39,8 +39,8 @@ const Cocktails = () => {
           <h2>Most Popular Cocktails:</h2>
 
           <ul>
-            {cocktailLists.map((cocktail) => (
-              <li key={cocktail.id}>
+            {cocktailLists.map((cocktail, index) => (
+              <li key={index}>
                 <div className="md:me-28">
                   <h3>{cocktail.name}</h3>
                   <p>
@@ -56,8 +56,8 @@ const Cocktails = () => {
           <h2>Most Loved Mocktails:</h2>
 
           <ul>
-            {mockTailLists.map((mocktail) => (
-              <li key={mocktail.id}>
+            {mockTailLists.map((mocktail, index) => (
+              <li key={index}>
                 <div className="me-28">
                   <h3>{mocktail.name}</h3>
                   <p>
