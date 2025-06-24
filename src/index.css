@@ -248,7 +248,7 @@ body {
     }
 
     .content {
-      @apply flex md:flex-row flex-col justify-between md:mb-16 md:mt-0 mt-40 gap-10;
+      @apply flex md:flex-row flex-col justify-between md:mb-16 md:mt-0 mt-40 gap-10 w-full;
     }
 
     .cocktail-img {
@@ -257,7 +257,7 @@ body {
 
     .masked-container {
       h2 {
-        @apply text-4xl md:text-5xl font-modern-negra text-center mb-10 text-white mt-32;
+        @apply text-4xl md:text-5xl font-modern-negra text-center mb-10 2xl:mb-28 text-white mt-32;
       }
 
       div {
