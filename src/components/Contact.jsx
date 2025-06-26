@@ -6,7 +6,7 @@ import gsap from "gsap";
 
 const Contact = () => {
   useGSAP(() => {
-    const titleSplit = SplitText.create("h2", {
+    const titleSplit = SplitText.create("#contact h2", {
       type: "words",
     });
 
