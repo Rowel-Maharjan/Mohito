@@ -9,23 +9,6 @@ const Menu = () => {
   const contentRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const totalCocktails = allCocktails.length;
-
-  const getCoktailAt = (indexOffset) => {
-    return allCocktails[
-      (currentIndex + indexOffset + totalCocktails) % totalCocktails
-    ];
-  };
-
-  const currentCocktail = getCoktailAt(0);
-  const prevCocktail = getCoktailAt(-1);
-  const nextCocktail = getCoktailAt(1);
-
-  const goToSlide = (index) => {
-    const newIndex = (index + totalCocktails) % totalCocktails;
-    setCurrentIndex(newIndex);
-  };
-
   useGSAP(() => {
     gsap.fromTo(
       "#title",
@@ -75,8 +58,24 @@ const Menu = () => {
         ease: "power1.inOut",
       }
     );
-  }, [currentCocktail]);
-  
+  }, [currentIndex]);
+
+  const totalCocktails = allCocktails.length;
+
+  const getCoktailAt = (indexOffset) => {
+    return allCocktails[
+      (currentIndex + indexOffset + totalCocktails) % totalCocktails
+    ];
+  };
+
+  const currentCocktail = getCoktailAt(0);
+  const prevCocktail = getCoktailAt(-1);
+  const nextCocktail = getCoktailAt(1);
+
+  const goToSlide = (index) => {
+    const newIndex = (index + totalCocktails) % totalCocktails;
+    setCurrentIndex(newIndex);
+  };
   return (
     <section id="menu" aria-labelledby="menu-heading">
       <img
